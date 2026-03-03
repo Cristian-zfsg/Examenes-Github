@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profesor>
+    <id>PROF01</id>
+    <nombre>Edgar Israel</nombre>
+    <apellidop>Otamendi</apellidop>
+    <apellidom>Garcia</apellidom>
+    <usuario>otamendi</usuario>
+    <password>123</password>
+    <correo>edgar@mail.com</correo>
+    <asignatura>
+        <nombre>Matemáticas Discretas</nombre>
+        <unidad>
+            <nombre>Lógica Proposicional</nombre>
+            <tema>
+                <nombre>Tablas de Verdad</nombre>
+                <pregunta>
+                    <Argumento>Segun la logica booleana, selecciona la respuesta correcta de la operacion "1 AND 1"</Argumento>
+                    <inciso>
+                        <respuesta>4</respuesta>
+                        <letra>97</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>0</respuesta>
+                        <letra>98</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>1</respuesta>
+                        <letra>99</letra>
+                        <valor_verdad>true</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>2</respuesta>
+                        <letra>100</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <numero_pregunta>1</numero_pregunta>
+                </pregunta>
+                <pregunta>
+                    <Argumento>Benito</Argumento>
+                    <inciso>
+                        <respuesta>s</respuesta>
+                        <letra>97</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>s</respuesta>
+                        <letra>98</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>s</respuesta>
+                        <letra>99</letra>
+                        <valor_verdad>true</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>n</respuesta>
+                        <letra>100</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <numero_pregunta>1</numero_pregunta>
+                </pregunta>
+            </tema>
+        </unidad>
+    </asignatura>
+    <asignatura>
+        <nombre>Programación Orientada a Objetos</nombre>
+        <unidad>
+            <nombre>Conceptos Fundamentales de POO</nombre>
+            <tema>
+                <nombre>Encapsulamiento y Herencia</nombre>
+                <pregunta>
+                    <Argumento>En POO, ¿qué es la encapsulación?</Argumento>
+                    <inciso>
+                        <respuesta>Una forma de bucle</respuesta>
+                        <letra>97</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>Ocultar la complejidad y proteger los datos</respuesta>
+                        <letra>98</letra>
+                        <valor_verdad>true</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>Permitir que una clase herede de otra</respuesta>
+                        <letra>99</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <inciso>
+                        <respuesta>Crear múltiples métodos con el mismo nombre</respuesta>
+                        <letra>100</letra>
+                        <valor_verdad>false</valor_verdad>
+                    </inciso>
+                    <numero_pregunta>1</numero_pregunta>
+                </pregunta>
+            </tema>
+        </unidad>
+    </asignatura>
+</profesor>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dermacore.generadorexamenes.HelloController">
+    <top>
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Asignatura:" />
+                <Label text="Unidad:" GridPane.rowIndex="1" />
+                <Label text="Tema:" GridPane.rowIndex="2" />
+                <ComboBox fx:id="cmbAsignaturas" prefWidth="300.0" promptText="Seleccione una asignatura..." GridPane.columnIndex="1" />
+                <ComboBox fx:id="cmbUnidades" prefWidth="300.0" promptText="Seleccione una unidad..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ComboBox fx:id="cmbTemas" prefWidth="300.0" promptText="Seleccione un tema..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="2">
+                    <children>
+                        <Button fx:id="btnAddAsignatura" mnemonicParsing="false" onAction="#onAddAsignatura" text="+" />
+                        <Button fx:id="btnDeleteAsignatura" mnemonicParsing="false" onAction="#onDeleteAsignatura" text="-" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <children>
+                        <Button fx:id="btnAddUnidad" mnemonicParsing="false" onAction="#onAddUnidad" text="+" />
+                        <Button fx:id="btnDeleteUnidad" mnemonicParsing="false" onAction="#onDeleteUnidad" text="-" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <children>
+                        <Button fx:id="btnAddTema" mnemonicParsing="false" onAction="#onAddTema" text="+" />
+                        <Button fx:id="btnDeleteTema" mnemonicParsing="false" onAction="#onDeleteTema" text="-" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </GridPane>
+    </top>
+    <center>
+        <TableView fx:id="tblPreguntas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colPreguntaEnunciado" prefWidth="785.0" text="Preguntas Existentes" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+    <bottom>
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="140.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="20.0" prefWidth="179.0" text="Formulario de Pregunta">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Pregunta:" GridPane.rowIndex="1" />
+                <TextArea fx:id="txtAreaPregunta" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <RadioButton fx:id="radioA" mnemonicParsing="false" text="Inciso A:">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="correctAnswerGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <TextField fx:id="txtIncisoA" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <RadioButton fx:id="radioB" mnemonicParsing="false" text="Inciso B:" toggleGroup="$correctAnswerGroup" />
+                        <TextField fx:id="txtIncisoB" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <children>
+                        <RadioButton fx:id="radioC" mnemonicParsing="false" text="Inciso C:" toggleGroup="$correctAnswerGroup" />
+                        <TextField fx:id="txtIncisoC" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <children>
+                        <RadioButton fx:id="radioD" mnemonicParsing="false" text="Inciso D:" toggleGroup="$correctAnswerGroup" />
+                        <TextField fx:id="txtIncisoD" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <children>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#onNuevoButtonClick" text="Nuevo" />
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" text="Guardar" />
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#onEliminarButtonClick" text="Eliminar" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </GridPane>
+    </bottom>
+</BorderPane>
